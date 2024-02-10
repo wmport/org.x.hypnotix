@@ -1,0 +1,5 @@
+requests
+IMDbPY
+setproctitle
+unidecode
+yt-dlp

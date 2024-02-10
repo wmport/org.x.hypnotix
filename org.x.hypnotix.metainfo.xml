@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>org.x.hypnotix</id>
+  <name>Hypnotix</name>
+  <project_license>GPL-3.0</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <developer_name>Linux Mint</developer_name>
+  <summary>IPTV streaming application</summary>
+  <url type="homepage">https://github.com/linuxmint/hypnotix</url>
+  <url type="bugtracker">https://github.com/linuxmint/hypnotix/issues</url>
+  <description>
+    <p>
+      Unofficial flatpak for Hypnotix.
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://user-images.githubusercontent.com/1138515/99553152-b8bac780-29b5-11eb-9d75-8756ed7581b6.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="4.3" date="2024-01-04"/>
+  </releases>
+  <provides>
+    <id>org.x.hypnotix</id>
+  </provides>
+</component>
