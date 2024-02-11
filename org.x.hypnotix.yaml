@@ -68,6 +68,16 @@ modules:
         url: https://github.com/linuxmint/xapp.git
         tag: 2.8.2
         commit: 97ce8df48a198b374aa74c68543ce6c0d79b61e8
+  - name: xapps-icons
+    buildsystem: simple
+    build-commands:
+      - mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/scalable
+      - cp -r icons/hicolor/scalable/* ${FLATPAK_DEST}/share/icons/hicolor/scalable
+    sources:
+      - type: git
+        url: https://github.com/linuxmint/xapp.git
+        tag: 2.8.2
+        commit: 97ce8df48a198b374aa74c68543ce6c0d79b61e8
 ################
 #libmpv
 ################
