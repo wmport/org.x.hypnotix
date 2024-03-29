@@ -28,6 +28,8 @@ modules:
           bsdtar -xf - \
             --exclude='./usr/share/doc'
       - find usr -type f -name '*.py' -exec sed -i 's@/usr/share@/app/hypnotix/share@g' {} +
+      - find usr -type f -name 'hypnotix.py' -exec sed -i 's@/usr/share@/app/hypnotix/share@g' {} +
+      - sed -i 's/dlg.set_logo_icon_name("hypnotix")/dlg.set_logo_icon_name("org.x.hypnotix")/' usr/lib/hypnotix/hypnotix.py
       - mkdir -p ${FLATPAK_DEST}/hypnotix
       - cp -r usr/* ${FLATPAK_DEST}/hypnotix
       - bsdtar -xf master.zip --strip-components=3 -C ${FLATPAK_DEST}/hypnotix/share circle-flags-master/usr/share/circle-flags-svg
@@ -38,7 +40,8 @@ modules:
       - cp -f ${FLATPAK_DEST}/hypnotix/share/glib-2.0/schemas/* ${FLATPAK_DEST}/share/glib-2.0/schemas
       - install -Dm 755 hypnotix "${FLATPAK_DEST}/bin/hypnotix"
     post-install:
-      - install -D  ${FLATPAK_ID}.metainfo.xml -t "${FLATPAK_DEST}/share/metainfo/"
+      - install -D ${FLATPAK_ID}.metainfo.xml -t "${FLATPAK_DEST}/share/metainfo/"
+      - install -D GPL -t "${FLATPAK_DEST}/hypnotix/share/common-licenses/"
     sources:
       - type: archive
         url: https://github.com/linuxmint/hypnotix/releases/download/master.lmde6/packages.tar.gz
@@ -47,6 +50,8 @@ modules:
           - x86_64
       - type: file
         path: org.x.hypnotix.metainfo.xml
+      - type: file
+        path: GPL
       - type: file
         path: hypnotix
       - type: file
@@ -78,6 +83,7 @@ modules:
         url: https://github.com/linuxmint/xapp.git
         tag: 2.8.2
         commit: 97ce8df48a198b374aa74c68543ce6c0d79b61e8
+
 ################
 #libmpv
 ################
