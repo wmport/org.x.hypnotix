@@ -24,7 +24,7 @@ modules:
     buildsystem: simple
     build-commands:
       - |
-        bsdtar -Oxf hypnotix_4.3_all.deb 'data.tar.xz' |
+        bsdtar -Oxf hypnotix_4.6_all.deb 'data.tar.xz' |
           bsdtar -xf - \
             --exclude='./usr/share/doc'
       - find usr -type f -name '*.py' -exec sed -i 's@/usr/share@/app/hypnotix/share@g' {} +
