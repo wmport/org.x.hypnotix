@@ -19,7 +19,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="4.3" date="2024-01-04"/>
+    <release version="4.6" date="2024-07-21"/>
   </releases>
   <provides>
     <id>org.x.hypnotix</id>
